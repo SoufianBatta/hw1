@@ -14,6 +14,7 @@
         return $a + $b;
     } 
     echo '<h1>' . somma($variavil,$batrest) . '</h1> <h2> la data di oggi e\' '. date("d-m-Y").'</h2>' ; 
+    echo 'test';
     ?> 
 </body>
 </html>
