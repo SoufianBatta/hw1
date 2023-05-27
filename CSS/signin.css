@@ -1,0 +1,21 @@
+form {
+    display: flex;
+    flex-direction: column;
+}
+form label {
+    display: flex;
+    justify-content: space-between;
+    width: 35%;
+}
+
+.error {
+    color: brown;
+}
+
+.hidden {
+    display: none;
+}
+
+#idcreato{
+    color: brown;
+}

@@ -1,20 +1,20 @@
+<?php
+session_start();
+include_once('Utils/Paths.php');
+?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
-    <script src="script.js"></script>
-    <title>Homepage</title>
+    <link rel="stylesheet" href=<?php echo getPath("index.css","CSS") ;?>>
+    <script src=<?php echo getPath("") ;?> defer></script>
+    <title>Index</title>
 </head>
 <body>
-    <?php 
-    $variavil = 4;
-    $batrest = 7;
-    function somma($a,$b){
-        return $a + $b;
-    } 
-    echo '<h1>' . somma($variavil,$batrest) . '</h1> <h2> la data di oggi e\' '. date("d-m-Y").'</h2>' ; 
-    echo 'test';
-    ?> 
+    <div id="header">
+
+    </div>
+    <a href=<?php echo getPath('login.php')?>>Accedi</a>
+    <a href=<?php echo getPath("signin_view.php")?>>Iscriviti</a>
 </body>
 </html>
