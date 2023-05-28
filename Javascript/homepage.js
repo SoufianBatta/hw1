@@ -21,8 +21,7 @@ function onresponse(response){
 
 function onJSON(body){
     console.log(body);
-    /*const div = document.querySelector('#Pokemon');
+    const div = document.querySelector('#Pokemon');
     const img = div.querySelector('img');
-    console.log(body.sprites);
-    img.src = body['sprites']['versions']['generation-v']['black-white']['animated']['front_shiny'];*/
+    img.src = body['img'];
 }

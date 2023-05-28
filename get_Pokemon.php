@@ -14,6 +14,7 @@
     $test['height'] = $result['height'];
     $test['weight'] = $result['weight'];
     $test['type_1'] = $result['types'][0]['type']['name'];
+    $test['type_2'] = null;
     if (isset($result['types'][1])) {
         $test['type_2'] = $result['types'][1]['type']['name'];
     }
@@ -23,11 +24,18 @@
     $test['special_attack'] = $result['stats'][3]['base_stat'];
     $test['special_defense'] = $result['stats'][4]['base_stat'];
     $test['speed'] = $result['stats'][5]['base_stat'];
-    $test['img'] = $result['sprites']['front_default'];
+    $test['img'] = $result['sprites']['versions']['generation-v']['black-white']['animated']['front_default'];
     $escaped_variables = DBManager::prevent_injection($test);
     $query_check = "SELECT * FROM Pokemon WHERE Pokemon.id =".$escaped_variables['id'];
     if (DBManager::count(DBmanager::exe($query_check)) === 0) {
-        $query_insert = "";
+        $query_insert = 
+        "
+        INSERT INTO Pokemon(id, name, height, weight, type_1, type_2, hp, attack, defense, special_attack, special_defense,speed, img)
+        Values(".$test['id'].",'".$test['name']."',".$test['height'].",".$test['height'].",'".$test['type_1']."','".$test['type_2']."',
+        ".$test['hp'].",".$test['attack'].",".$test['defense'].",".$test['special_attack'].",".$test['special_defense'].",".$test['speed'].",
+        '".$test['img']."')
+        ";
+        DBManager::exe($query_insert);
     }
     print_r(json_encode($test));
 ?>
