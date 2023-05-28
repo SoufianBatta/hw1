@@ -1,6 +1,5 @@
 <?php
-    include_once("Utils/Paths.php");
-    include_once(getPath("DBmanager.php","Utils"));
+    include_once("Utils/DBManager.php");
     session_start();
     DBManager::init() or die(mysqli_connect_error());
     if (isset($_POST['fromForm'])) {
@@ -35,13 +34,19 @@
             .$escaped_variables['password']
             ."')
             ";
-            DBManager::exe($query);
+            $Status = DBManager::exe($query);
             $query_check = "SELECT * FROM UTENTI";
             $_SESSION['Users'] = DBManager::segregate(DBManager::exe($query_check));
+            if ($Status) {
+                $_SESSION['username'] = $escaped_variables['username'];
+                unset($_SESSION['Values']);
+                header('Location: homepage.php');
+                exit;
+            }
         }
         else{
             $_SESSION['found']=true;
         }  
     }
-    header("Location: ".getPath("signin_view.php"));
+    header("Location: signin_view.php");
 ?>

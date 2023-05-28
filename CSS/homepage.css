@@ -1,0 +1,8 @@
+#Pokemon{
+    height: 20vh;
+    width: 50vw;
+}
+#Pokemon img{
+    height: 100%;
+    width: 100%;
+}

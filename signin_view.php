@@ -1,5 +1,4 @@
 <?php
-include_once("Utils/Paths.php");
 session_start();
 if (isset($_SESSION['Values'])) {
     $variables = $_SESSION['Values'];
@@ -9,12 +8,13 @@ if (isset($_SESSION['Values'])) {
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href=<?php echo getPath("signin.css","CSS") ;?>>
-    <script src=<?php echo getPath("signin.js","Javascript") ;?> defer></script>
+    <link rel="stylesheet" href="CSS/signin.css">
+    <script src="Javascript/signin.js" defer></script>
     <title>Signin</title>
 </head>
 <body>
-    <form method='post' name='signin' action=<?php echo getPath("signin_logic.php") ;?>>
+    <div id="Content">
+    <form method='post' name='signin' id="signin" action="signin_logic.php">
         <label for="name">
             Nome 
             <input type='text' name = 'nome' placeholder='Inserire il nome' <?php $value = (isset($variables)) ? "value='".$variables['nome']."'" : ""; echo $value;?>>
@@ -47,11 +47,8 @@ if (isset($_SESSION['Values'])) {
         </label>
         <input type='submit' name='invio' value='Invia'>
     </form>
+    </div>
     <?php
-    if (isset($_SESSION['Users'])) {
-        $Users = $_SESSION['Users'];
-        print_r($Users);
-    }
     if (isset($_SESSION['found']) && $_SESSION['found']) {
         echo '<br>';
         echo "<div class='error'>ATTENZIONE USERNAME O EMAIL GIA PRESENTI</div>";
