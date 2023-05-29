@@ -14,17 +14,17 @@ function onjson(body){
         image.id = 'image';
         image.appendChild(img);
         const name = document.createElement('span');
-        name.innerHTML = pokemon.name;
+        name.innerHTML ="Name : "+ pokemon.name;
         const type1 = document.createElement('span');
         type1.innerHTML = pokemon.type_1;
-        type1.id = pokemon.type_1;
+        type1.id = "Type 1 : " +pokemon.type_1;
         const seen = document.createElement('div');
         seen.id = 'seen';
         seen.appendChild(name);
         seen.appendChild(type1);
         if(pokemon.type_2){
             const type2 = document.createElement('span');
-            type2.innerHTML = pokemon.type_2;
+            type2.innerHTML ="Type 2 : " +pokemon.type_2;
             type2.id = pokemon.type_2;
             seen.appendChild(type2);
         }
@@ -41,5 +41,13 @@ function onjson(body){
         if (pokemon.catturato === 0){
             captured.classList.add('hidden');
         }
+        hp.innerHTML ="HP : " + pokemon.hp;
+        attack.innerHTML = "Attack : " + pokemon.attack;
+        defense.innerHTML = "Defense : " + pokemon.defense;
+        sp_attack.innerHTML = "Special Attack : " + pokemon.special_attack;
+        sp_defense.innerHTML = "Special Protection : " + pokemon.special_defense;
+        speed.innerHTML = "Speed : " + pokemon.speed;
+        height.innerHTML = "Height : " + pokemon.height;
+        weight.innerHTML = "Weight : " + pokemon.weight;
     }
 }
