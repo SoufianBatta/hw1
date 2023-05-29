@@ -2,12 +2,12 @@
     include_once("Utils/DBManager.php");
     //Creo l'elemento CURL con cui fare la richiesta API (Foglio Bianco)
     $poke_curl = curl_init();
-    $spotify_curl = curl_init();
     //Imposto l'URL (Destinatario)
     curl_setopt($poke_curl, CURLOPT_URL, "https://pokeapi.co/api/v2/pokemon/".$_GET['poke']);
     curl_setopt($poke_curl, CURLOPT_RETURNTRANSFER,1);
     $result = json_decode(curl_exec($poke_curl),true);
-    DBManager::init();
+    curl_close($poke_curl);
+    DBManager::init() or die("Couldn't initialize DBManager <br>".mysqli_connect_error());
     $test = array();
     $test['id'] = $result['id'];
     $test['name'] = $result['name'];
@@ -24,7 +24,12 @@
     $test['special_attack'] = $result['stats'][3]['base_stat'];
     $test['special_defense'] = $result['stats'][4]['base_stat'];
     $test['speed'] = $result['stats'][5]['base_stat'];
-    $test['img'] = $result['sprites']['versions']['generation-v']['black-white']['animated']['front_default'];
+    if (isset($result['sprites']['versions']['generation-v']['black-white']['animated']['front_default'])) {
+        $test['img'] = $result['sprites']['versions']['generation-v']['black-white']['animated']['front_default'];
+    }
+    else{
+    $test['img'] = $result['sprites']['front_default'];
+    }
     $escaped_variables = DBManager::prevent_injection($test);
     $query_check = "SELECT * FROM Pokemon WHERE Pokemon.id =".$escaped_variables['id'];
     if (DBManager::count(DBmanager::exe($query_check)) === 0) {
@@ -37,5 +42,6 @@
         ";
         DBManager::exe($query_insert);
     }
+    DBManager::close();
     print_r(json_encode($test));
 ?>

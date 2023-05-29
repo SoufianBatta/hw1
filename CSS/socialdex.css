@@ -1,0 +1,156 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-image: url("../Images/Login/background.jpg");
+    margin: 0;
+    box-sizing: border-box;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+#SocialDex{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100;
+    height: auto;
+}
+#Pokemon {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 260px;
+    border-radius: 20px;
+    background-color: #00000077;
+    border: 2px solid red;
+}
+
+#image {
+    height: 100%;
+    width:30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#image img {
+    height: 80%;
+    width: 80%;
+}
+
+#info {
+    height: 100%;
+    width:50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+ span {
+    background-color: rgba(165, 165, 165, 0.783);
+    color: rgb(0, 0, 0);
+    border: 2px solid rgb(255, 255, 255);
+    font-size: calc(.8vh + .5vw);
+    box-sizing: border-box;
+    margin: 5px;
+}
+ #normal{
+    background-color: rgba(222, 209, 168, 0.783);
+    color: rgb(0, 0, 0);
+    border: 2px solid rgb(255, 255, 255);
+}
+ #fight{
+    background-color: rgba(213, 122, 42, 0.525);
+    color: white;
+    border: 2px solid rgba(181, 32, 32, 0.718);
+}
+ #flying{
+    background-color: rgba(158, 149, 240, 0.655);
+    color: rgb(0, 0, 0);
+    border: 2px solid rgb(255, 255, 255);
+}
+ #poison{
+    background-color: rgba(188, 64, 219, 0.595);
+    color: white;
+    border: 2px solid rgb(203, 0, 44);
+}
+#ground{
+    background-color: rgba(245, 195, 114, 0.743);
+    color: rgb(0, 0, 0);
+    border: 2px solid rgb(0, 0, 0);
+}
+ #rock{
+    background-color: rgba(112, 42, 2, 0.711);
+    color: white;
+    border: 2px solid rgb(255, 255, 255);
+}
+ #bug{
+    background-color: rgba(91, 133, 2, 0.768);
+    color: rgb(0, 0, 0);
+    border: 2px solid rgb(132, 255, 0);
+}
+#ghost{
+    background-color: rgba(74, 6, 189, 0.708);
+    color: white;
+    border: 2px solid rgba(127, 1, 173, 0.623);
+}
+#steel{
+    background-color: rgba(146, 149, 149, 0.749);
+    color: white;
+    border: 2px solid rgb(255, 255, 255);
+}
+ #fire{
+    background-color: rgba(223, 56, 5, 0.648);
+    color: rgb(0, 0, 0);
+    border: 2px solid rgb(208, 135, 0);
+}
+#grass{
+    background-color: rgba(40, 113, 0, 0.892);
+    color: white;
+    border: 2px solid rgb(255, 255, 255);
+}
+#electric{
+    background-color: rgba(199, 173, 0, 0.736);
+    color: rgb(0, 0, 0);
+    border: 2px solid rgb(255, 238, 0);
+}
+#psychic{
+    background-color: rgba(246, 127, 255, 0.766);
+    color: rgb(0, 0, 0);
+    border: 2px solid rgb(0, 0, 0);
+}
+ #ice{
+    background-color: rgba(108, 252, 252, 0.721);
+    color: white;
+    border: 2px solid rgb(255, 255, 255);
+}
+ #dragon{
+    background-color: rgba(64, 0, 239, 0.564);
+    color: white;
+    border: 2px solid rgb(255, 255, 255);
+}
+ #dark{
+    background-color: rgba(31, 31, 31, 0.821);
+    color: rgb(163, 108, 108);
+    border: 2px solid rgb(163, 108, 108);
+}
+ #fairy{
+    background-color: rgba(228, 165, 255, 0.884);
+    color: rgb(255, 255, 255);
+    border: 2px solid rgb(182, 164, 190);
+}
+ #water{
+    background-color: rgba(0, 255, 255, 0.331);
+    color: white;
+    border: 2px solid rgb(6, 6, 93);
+}
+
+#captured{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}

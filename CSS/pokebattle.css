@@ -1,0 +1,233 @@
+:root {
+    --grid-size:  80%;
+    --margin-size: 0px;
+    --square-size: calc((var(--grid-size) / 3) - var(--margin-size));
+    --colore-bordo: rgba(0,0,0, 0.9);
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-image: url("../Images/Login/background.jpg");
+    margin: 0;
+    box-sizing: border-box;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+#Wild{
+    border: 2px double red;
+    height: 35%;
+    width: 80%;
+    box-sizing: border-box;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#Pokemon {
+    height: 100%;
+    width: 100%;
+    background-color: #00000077;
+    display: flex;
+    justify-content: space-between;
+}
+#Pokemon div{
+    width: 35%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+#Pokemon div img{
+    width: 100%;
+    height: 80%;
+    box-sizing: border-box;
+    padding-left: 10px;
+}
+#Pokemon div span{
+    width: 60%;
+    text-align: center;
+    padding: 5px;
+    font-size: calc(1vh + .9vw);
+    border-radius: 20px;
+    border: 2px solid red;
+    background-color: bisque;
+}
+#Pokemon #normal{
+    background-color: rgba(222, 209, 168, 0.783);
+    color: rgb(0, 0, 0);
+    border: 2px solid rgb(255, 255, 255);
+}
+#Pokemon #fight{
+    background-color: rgba(213, 122, 42, 0.525);
+    color: white;
+    border: 2px solid rgba(181, 32, 32, 0.718);
+}
+#Pokemon #flying{
+    background-color: rgba(158, 149, 240, 0.655);
+    color: rgb(0, 0, 0);
+    border: 2px solid rgb(255, 255, 255);
+}
+#Pokemon #poison{
+    background-color: rgba(188, 64, 219, 0.595);
+    color: white;
+    border: 2px solid rgb(203, 0, 44);
+}
+#Pokemon #ground{
+    background-color: rgba(245, 195, 114, 0.743);
+    color: rgb(0, 0, 0);
+    border: 2px solid rgb(0, 0, 0);
+}
+#Pokemon #rock{
+    background-color: rgba(112, 42, 2, 0.711);
+    color: white;
+    border: 2px solid rgb(255, 255, 255);
+}
+#Pokemon #bug{
+    background-color: rgba(91, 133, 2, 0.768);
+    color: rgb(0, 0, 0);
+    border: 2px solid rgb(132, 255, 0);
+}
+#Pokemon #ghost{
+    background-color: rgba(74, 6, 189, 0.708);
+    color: white;
+    border: 2px solid rgba(127, 1, 173, 0.623);
+}
+#Pokemon #steel{
+    background-color: rgba(146, 149, 149, 0.749);
+    color: white;
+    border: 2px solid rgb(255, 255, 255);
+}
+#Pokemon #fire{
+    background-color: rgba(223, 56, 5, 0.648);
+    color: rgb(0, 0, 0);
+    border: 2px solid rgb(208, 135, 0);
+}
+#Pokemon #grass{
+    background-color: rgba(40, 113, 0, 0.892);
+    color: white;
+    border: 2px solid rgb(255, 255, 255);
+}
+#Pokemon #electric{
+    background-color: rgba(199, 173, 0, 0.736);
+    color: rgb(0, 0, 0);
+    border: 2px solid rgb(255, 238, 0);
+}
+#Pokemon #psychic{
+    background-color: rgba(246, 127, 255, 0.766);
+    color: rgb(0, 0, 0);
+    border: 2px solid rgb(0, 0, 0);
+}
+#Pokemon #ice{
+    background-color: rgba(108, 252, 252, 0.721);
+    color: white;
+    border: 2px solid rgb(255, 255, 255);
+}
+#Pokemon #dragon{
+    background-color: rgba(64, 0, 239, 0.564);
+    color: white;
+    border: 2px solid rgb(255, 255, 255);
+}
+#Pokemon #dark{
+    background-color: rgba(31, 31, 31, 0.821);
+    color: rgb(163, 108, 108);
+    border: 2px solid rgb(163, 108, 108);
+}
+#Pokemon #fairy{
+    background-color: rgba(228, 165, 255, 0.884);
+    color: rgb(255, 255, 255);
+    border: 2px solid rgb(182, 164, 190);
+}
+#Pokemon #water{
+    background-color: rgba(0, 255, 255, 0.331);
+    color: white;
+    border: 2px solid rgb(6, 6, 93);
+}
+#Result {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+}
+#finish{
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+    width: 80%;
+    background-color: #00000077;
+    color: white;
+
+}
+#finish button{
+    box-sizing: border-box;
+    margin: 5px;
+    font-size: calc(.3vh + .6vw);
+    background-image: linear-gradient(to top, black, transparent );
+    background-color: transparent;
+    width: 50%;
+    color: white;
+}
+#finish span{
+    width: 40%;
+    height: 100%;
+    font-size: calc(1vh + .7vw);
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: wavy;
+    box-sizing: border-box;
+    padding: 10px;
+}
+#game {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50%;
+}
+
+#grid {
+    display: flex;
+    background-color: var(--colore-bordo);
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: space-around;
+    height: var(--grid-size);
+    width: var(--grid-size);
+    
+}
+
+#grid div {
+    background-color: white;
+    height: var(--square-size);
+    width: var(--square-size);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#grid div img {
+    width: 100%;
+    height: 100%;
+}
+
+#grid .notchosen:hover{
+    transition-duration: 0.3s;
+    background-color: rgba(255,0,0, 0.7);
+}
+
+#Pokemon:hover {
+    transition-duration: 0.3s;
+    background-color: #00000033;
+}
+
+#finish button:hover {
+    background-image: linear-gradient(to top, red, #e8d86f);
+    color: black;
+}

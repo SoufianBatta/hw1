@@ -22,11 +22,13 @@
         if ( $righe_result >= 1) {
             $_SESSION['username'] = $_POST['username'];
             header('Location: homepage.php');
+            DBManager::close();
             exit;
         }
         else {
             $_SESSION['notfound'] = true;
             header('Location: login_view.php');
+            DBManager::close();
             exit;
         }
     }

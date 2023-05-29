@@ -1,5 +1,4 @@
 <?php
-include_once("Utils/DBManager.php");
 session_start();
 ?>
 <!DOCTYPE html>

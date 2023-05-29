@@ -1,8 +1,178 @@
-#Pokemon{
-    height: 20vh;
-    width: 50vw;
-}
-#Pokemon img{
-    height: 100%;
+body{
+    background-image: linear-gradient(to bottom right, #e8d86f, white);
+    height: fit-content;
     width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+    padding: 20px ;
+    background-repeat: no-repeat;
+}
+#header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+    border: 4px red;
+    border-style: double;
+    background-color: #00000099;
+    color: white;
+    width: 100%;
+}
+#header #logout{
+    height: 100%;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0px;
+    background-image: none;
+}
+#header div{
+    box-sizing: border-box;
+    padding: 20px;
+    height: 100%;
+    width: 90%;
+    background-image: url("../Images/Index/header.jpg");
+    background-repeat: no-repeat;
+    background-clip: content-box;
+    background-size: cover;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#header h1{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: calc(1.8vh + 1.8vw);
+}
+#header a{
+    width: 100%;
+    height: fit-content;
+    text-decoration: none;
+    color: white;
+    font-size: calc(1.8vh + 1vw);
+    box-sizing: border-box;
+    padding: 10px;
+}
+#content {
+    display: flex;
+    width: 100%;
+    height: 80vh;
+    justify-content: space-between;
+}
+#profile {
+    height: 100%;
+    width: 50%;
+    box-sizing: border-box;
+    padding: 10px;
+    margin: 10px;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #00000055;
+}
+#interface{
+    height: 100%;
+    width: 45%;
+    box-sizing: border-box;
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+#interface div{
+    width: 100%;
+    height: 30%;
+    background-color: #00000055;
+    border: 2px double red;
+    border-radius: 10px;
+}
+#picture{
+    height: 40%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#picture img {
+    width: 80%;
+    height: 80%;
+    box-sizing: border-box;
+    padding: 30px;
+}
+#picture input{
+    box-sizing: border-box;
+    margin: 5px;
+    font-size: calc(.3vh + .6vw);
+    background-image: linear-gradient(to top, black, transparent );
+    background-color: transparent;
+    color: white;
+    width: 80%;
+}
+#info{
+    height: 60%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: calc(.8vh + .7vw);
+}
+#info span{
+    box-sizing: border-box;
+    text-align: start;
+    width: 100%;
+}
+#profile:hover{
+    transition-duration: .7s;
+    background-color: rgba(255, 0, 0, 0.307);
+}
+#profile:not(hover){
+    transition-duration: .3s;
+}
+#interface div:hover{
+    transition-duration: .7s;
+    background-color: rgba(255, 0, 0, 0.307);
+}
+#interface div:not(hover){
+    transition-duration: .3s;
+}
+#picture input:hover{
+    background-image: linear-gradient(to top, red, #e8d86f);
+    color: white;
+}
+#info span:hover{
+    transition-duration: 1s;
+    background-color: rgba(255, 0, 0, 0.307);
+    border: 2px solid black;
+}
+#info span:not(hover){
+    transition-duration: .5s;
+}
+#interface a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: red;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: calc(.9vh + .5vw);
+}
+#interface a:hover{
+    transition-duration: .6s;
+    color: white;
+    font-size: calc(1.5vh + 0.8vw);
 }

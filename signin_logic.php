@@ -41,6 +41,7 @@
                 $_SESSION['username'] = $escaped_variables['username'];
                 unset($_SESSION['Values']);
                 header('Location: homepage.php');
+                DBManager::close();
                 exit;
             }
         }
@@ -48,5 +49,6 @@
             $_SESSION['found']=true;
         }  
     }
+    DBManager::close();
     header("Location: signin_view.php");
 ?>
