@@ -19,6 +19,7 @@ function onjson(body){
         type1.innerHTML = pokemon.type_1;
         type1.id = pokemon.type_1;
         const seen = document.createElement('div');
+        seen.id = 'seen';
         seen.appendChild(name);
         seen.appendChild(type1);
         if(pokemon.type_2){
@@ -27,6 +28,18 @@ function onjson(body){
             type2.id = pokemon.type_2;
             seen.appendChild(type2);
         }
-        
+        const hp = document.createElement('span');
+        const attack = document.createElement('span');
+        const defense = document.createElement('span');
+        const sp_attack = document.createElement('span');
+        const sp_defense = document.createElement('span');
+        const speed = document.createElement('span');
+        const height = document.createElement('span');
+        const weight = document.createElement('span');
+        const captured = document.createElement('div');
+        captured.id = 'captured';
+        if (pokemon.catturato === 0){
+            captured.classList.add('hidden');
+        }
     }
 }
