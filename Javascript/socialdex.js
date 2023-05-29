@@ -6,7 +6,7 @@ function onresp(response){
 }
 function onjson(body){
     console.log(body);
-    const pokemon = document.getElementById('Pokemon');
+    const SocialDex = document.getElementById('SocialDex');
     for (const pokemon of body) {
         const img = document.createElement('img');
         img.src = pokemon.img;
@@ -16,8 +16,8 @@ function onjson(body){
         const name = document.createElement('span');
         name.innerHTML ="Name : "+ pokemon.name;
         const type1 = document.createElement('span');
-        type1.innerHTML = pokemon.type_1;
-        type1.id = "Type 1 : " +pokemon.type_1;
+        type1.innerHTML = "Type 1 : " + pokemon.type_1;
+        type1.id = pokemon.type_1;
         const seen = document.createElement('div');
         seen.id = 'seen';
         seen.appendChild(name);
@@ -37,8 +37,8 @@ function onjson(body){
         const height = document.createElement('span');
         const weight = document.createElement('span');
         const captured = document.createElement('div');
-        captured.id = 'captured';
-        if (pokemon.catturato === 0){
+        captured.classList.add('captured');
+        if (pokemon.catturato == 0){
             captured.classList.add('hidden');
         }
         hp.innerHTML ="HP : " + pokemon.hp;
@@ -49,5 +49,21 @@ function onjson(body){
         speed.innerHTML = "Speed : " + pokemon.speed;
         height.innerHTML = "Height : " + pokemon.height;
         weight.innerHTML = "Weight : " + pokemon.weight;
+        captured.appendChild(hp);
+        captured.appendChild(defense);
+        captured.appendChild(sp_attack);
+        captured.appendChild(sp_defense);
+        captured.appendChild(speed);
+        captured.appendChild(height);
+        captured.appendChild(weight);
+        const info = document.createElement('div');
+        info.id = 'info';
+        info.appendChild(seen);
+        info.appendChild(captured);
+        const pokemons = document.createElement('div');
+        pokemons.id = "Pokemon";
+        pokemons.appendChild(image);
+        pokemons.appendChild(info);
+        SocialDex.appendChild(pokemons);
     }
 }
